@@ -1,0 +1,380 @@
+{
+    "carousel":[
+        {
+            "id": 1,
+            "img": "/img/Benz.jpg"
+        },
+        {
+            "id": 2,
+            "img": "/img/lexus-banner.jpg"
+        },
+        {
+            "id": 3,
+            "img": "/img/Lexus.jpg"
+        }
+    ],
+
+    "products" : [
+        {
+            "id": 1,
+            "name": "Benz E55 AMG",
+            "img": "/img/benz-1.jpeg",
+            "price": 5550000,
+            "description": "Elegance",
+            "featured": true,
+            "topSelling": false
+        },
+        {
+            "id": 2,
+            "name": "Honda Accord Exl",
+            "img": "/img/Honda-1.jpg",
+            "price": 4350000,
+            "featured": true,
+            "topSelling": false
+        },
+        {
+            "id": 3,
+            "name": "Toyota Camry Xl",
+            "img": "/img/Toyota-4.jpg",
+            "price": 7660000,
+            "featured": true,
+            "topSelling": false
+            
+        },
+        {
+            "id": 4,
+            "name": "Lexus 570",
+            "img": "/img/lexus-3.jpg",
+            "price": 12500000,
+            "featured": true,
+            "topSelling": false
+        },
+        {
+            "id": 5,
+            "name": "Lexus Es350",
+            "img": "/img/lexus-1.jpg",
+            "price": 16300500,
+            "featured": false,
+            "topSelling": true
+        },
+        {
+            "id": 6,
+            "name": "Mercedes Benz Cls",
+            "img": "/img/mercedes.jpeg",
+            "price": 24760000,
+            "featured": false,
+            "topSelling": true
+        },
+        {
+            "id": 7,
+            "name": "BMW X5 Limited",
+            "img": "/img/bmw.jpeg",
+            "price": 35450000,
+            "featured": false,
+            "topSelling": true
+        },
+        {
+            "id": 8,
+            "name": "Bentley Espirit",
+            "img": "/img/Bentley.jpeg",
+            "price": 99000000,
+            "featured": false,
+            "topSelling": true
+        },
+        {
+            "id": 9,
+            "name": "Favicon srx",
+            "img": "/img/favicon.png",
+            "price": 155000000,
+            "featured": false,
+            "topSelling": true
+        },
+        {
+            "id": 10,
+            "name": "Porche",
+            "img": "/img/porche.jpeg",
+            "price": 125000000,
+            "featured": false,
+            "topSelling": true
+        }
+    ],
+
+    "inventory": [
+        {
+            "id": 1,
+            "name": "BMW i7",
+            "img": "/img/2023-BMW-i7.jpg",
+            "price": 17500000,
+            "year": "2023",
+            "inventory": true
+        },
+        {
+            "id": 2,
+            "name": "Rolls Royce Phantom",
+            "img": "/img/2023-Rolls-Royce-Phantom.webp",
+            "price": 97500000,
+            "year": "2020",
+            "inventory": true
+        },
+        {
+            "id": 3,
+            "name": "BMW 430i Grandcoupe",
+            "img": "/img/2024-BMW-430i-GRANDCOUPE.jpg",
+            "price": 26000000,
+            "year": "2024",
+            "inventory": true
+        },
+        {
+            "id": 4,
+            "name": "Bentley Continental Gtc",
+            "img": "/img/bentley-continental-gtc-v8.jpg",
+            "price": 87500000,
+            "year": "2020",
+            "inventory": true
+        },
+        {
+            "id": 5,
+            "name": "Mercedes Benz GLE 350",
+            "img": "/img/mercedes-benz-gle-350.jpg",
+            "price": 37500000,
+            "year": "2020",
+            "inventory": true
+        },
+        {
+            "id": 6,
+            "name": "Mercedes Benz S Class",
+            "img": "/img/mercedesbenz_S Class.webp",
+            "price": 67500000,
+            "year": "2020",
+            "inventory": true
+        },
+        {
+            "id": 7,
+            "name": "Pagani Huayra Bc",
+            "img": "/img/pagani-huayra-bc.webp",
+            "price": 110500000,
+            "year": "2019",
+            "inventory": true
+        },
+        {
+            "id": 8,
+            "name": "Ferari",
+            "img": "/img/Ferari.jpg",
+            "price": 107500000,
+            "year": "2019",
+            "inventory": true
+        },
+        {
+            "id": 9,
+            "name": "Mercedes Benz E Class",
+            "img": "/img/mercedes--e-class.jpg",
+            "price": 37500000,
+            "year": "2022",
+            "inventory": true
+        },
+        {
+            "id": 10,
+            "name": "Toyota Highlander",
+            "img": "/img/2024-toyota-highlander.jpg",
+            "price": 24500000,
+            "year": "2022",
+            "inventory": true
+        },
+        
+        {
+            "id": 11,
+            "name": "2018 Totyotaa Camry",
+            "img": "/img/2018-Toyota-Camry.jpg",
+            "price": 5500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 12,
+            "name": "2022 Toyota Corolla",
+            "img": "/img/2022-Toyota-Corolla.jpg",
+            "price": 4500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 13,
+            "name": "2022 Honda Accord",
+            "img": "/img/Honda Accord 2022.jpg",
+            "price": 5600000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+            
+        },
+        {
+            "id": 14,
+            "name": "2022 Mercedes Benz C Class",
+            "img": "/img/Mercedes_Benz_C_Class.webp",
+            "price": 9500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 15,
+            "name": "2022 Toyota 4Runner",
+            "img": "/img/Toyota-Landcruiser.webp",
+            "price": 11500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 16,
+            "name": "2022 Toyota Land-Cruiser",
+            "img": "/img/toyota-1.jpg",
+            "price": 14600000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 17,
+            "name": "2022 Honda HRV",
+            "img": "/img/Honda Accord-HRV.jpeg",
+            "price": 11200000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 18,
+            "name": "2022 Mercede Benz CLS",
+            "img": "/img/mercedes.jpeg",
+            "price": 14900000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 19,
+            "name": "2023 BMW 5 Series",
+            "img": "/img/2023_bmw_5_series.jpg",
+            "price": 19500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 20,
+            "name": "2020 BMW X4",
+            "img": "/img/2020-BMW-X4.jpg",
+            "price": 17500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        },
+        {
+            "id": 21,
+            "name": "2020 Favicon",
+            "img": "/img/favicon.png",
+            "price": 87500000,
+            "featured": false,
+            "topSelling": false,
+            "inventory": true
+        }
+        
+        ],
+
+        "arrivals" : [
+            {
+                "id": 1,
+                "name": "2020 Ford Mustang",
+                "img": "/img/2020 Ford Mustang.jpeg",
+                "price": 35500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 2,
+                "name": "2020 Jaguar xj.jpeg",
+                "img": "/img/2020 Jaguar xj.jpeg",
+                "price": 85500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 3,
+                "name": "2022 Jeep Wrangler.jpg",
+                "img": "/img/2022_Jeep_Wrangler.jpg",
+                "price": 55500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 4,
+                "name": "2024 Range Rover",
+                "img": "/img/2024 Range rover.jpeg",
+                "price": 95500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 5,
+                "name": "2024 Hyundai Genesis",
+                "img": "/img/2024-Genesis-G80.jpeg",
+                "price": 75500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 6,
+                "name": "2024 Nissan Rogue",
+                "img": "/img/2024-nissan-rogue.jpg",
+                "price": 65500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 7,
+                "name": "Ducati Panigale",
+                "img": "/img/Ducati-panigale.jpg",
+                "price": 27500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 8,
+                "name": "Suzuki Hayabusa",
+                "img": "/img/Hayabusa Bike.jpg",
+                "price": 30500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            },
+            {
+                "id": 9,
+                "name": "Tesla Electric Cars",
+                "img": "/img/Tesla-Logo-Hero.jpg",
+                "price": 32500000,
+                "featured": false,
+                "topSelling": false,
+                "inventory": false,
+                "arrrivals": true
+            }
+        ]
+
+}
