@@ -52,7 +52,7 @@ export const EcomProvider = ({children}) =>{
         }
 
         const fetchCarousel = async()=>{
-            const res = await fetch("https://technotronix-api-eeve.onrender.com/carousel")
+            const res = await fetch("https://localhost:3000/carousel")
             const data = await res.json()
             setSlide(data)
 
