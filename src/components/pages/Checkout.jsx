@@ -6,7 +6,7 @@ import { Navigate } from 'react-router-dom';
 
 function Checkout() {
 
-    const {cartItems, totalAmount, isAuthenticated} = useContext(EcomContext)
+    const { cartItems, totalAmount, isAuthenticated } = useContext(EcomContext)
     const total = totalAmount();
 
     if (!isAuthenticated) {
@@ -31,87 +31,87 @@ function Checkout() {
                     "Content-Type": "application/json",
                     "auth-token": `${localStorage.getItem("auth-token")}`,
                 },
-                body: JSON.stringify({amount, currency, firstName, lastName, phone, address})
+                body: JSON.stringify({ amount, currency, firstName, lastName, phone, address })
             })
 
             const data = await res.json()
             if (res.ok) {
-                window.location.href = data.link 
-            }else{
+                window.location.href = data.link
+            } else {
                 console.error(data.msg || "Failed to initiate payment");
             }
         } catch (error) {
             console.error(error);
         }
-       }
+    }
 
 
-  return (
-    <div className='flex gap-8 m-[5%]'>
-    <div className='w-[50%]'>
-        <h1 className='font-bold text-center mb-5'>Order Summary</h1>
-        <table className='w-[100%] mx-auto h-[50vh]'>
-        <thead>
-            
-            <th>Item</th>
-            <th>Image</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Amount</th>
-        </thead>
-        <tbody className='text-center'>
-            {cartItems.products?.map((item) => (
-                <tr className='border-b-2 font-semibold'>
-                    <td>{item.name}</td>
-                    <td>
-                        <div className='flex justify-center'>
-                            <img src={"https://technotronix-api-eeve.onrender.com" +  item.product.img} className='h-[50px]' alt="" />
-                        </div>
-                    </td>
-                    <td>₦{item.product.price}</td>
-                    <td>
-                        {item.quantity}
-                    </td>
-                    <td>₦{item.amount}</td>
-                </tr>
-            ))}
-        </tbody>
-    </table>
-    <div className='w-[90%] mx-auto font-bold text-2xl'>
-        <h1>Total = ₦{totalAmount()}</h1>
+    return (
+        <div className='flex gap-8 m-[5%] md:flex-col'>
+            <div className='w-[50%]'>
+                <h1 className='font-bold text-center mb-5'>Order Summary</h1>
+                <table className='w-[100%] mx-auto h-[50vh]'>
+                    <thead>
 
-    </div>
-    </div>
-    <div className='w-[50%] mx-auto font-semibold'>
-          <h1 className='text-2xl font-bold'>Delivery Information</h1>
-          <form onSubmit={(e) => handleCheckout(e)} id='orderId'>
-            <div className='flex flex-col gap-3 mb-3'>
-                <label htmlFor="first name"> First Name</label>
-                <input className='outline outline-1' type="text" name='firstName' />
-            </div>
-            <div className='flex flex-col gap-3 mb-3'>
-                <label htmlFor="last name"> Last Name</label>
-                <input className='outline outline-1' type="text" name='lastName' />
-            </div>
-            <div className='flex flex-col gap-3 mb-3'>
-                <label htmlFor="phone number"> Phone Number</label>
-                <input className='outline outline-1' type="text" name='phone'/>
-            </div>
-            <div className='flex flex-col gap-3 mb-3'>
-                <label className='font-bold' htmlFor="Address">Address</label>
-                <textarea className='outline outline-1' name="address" id="" cols="30" rows="10" ></textarea>
+                        <th>Item</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </thead>
+                    <tbody className='text-center'>
+                        {cartItems.products?.map((item) => (
+                            <tr className='border-b-2 font-semibold'>
+                                <td>{item.name}</td>
+                                <td>
+                                    <div className='flex justify-center'>
+                                        <img src={"https://technotronix-api-eeve.onrender.com/" + item.product.img} className='h-[50px]' alt="" />
+                                    </div>
+                                </td>
+                                <td>₦{item.product.price}</td>
+                                <td>
+                                    {item.quantity}
+                                </td>
+                                <td>₦{item.amount}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <div className='w-[90%] mx-auto font-bold text-2xl'>
+                    <h1>Total = ₦{totalAmount()}</h1>
 
+                </div>
             </div>
-            <div>
-                <button className='bg-black text-white p-[10px] rounded-md hover:bg-orange-500'>
-                    Pay Now
-                </button>
+            <div className='w-[50%] mx-auto font-semibold'>
+                <h1 className='text-2xl font-bold'>Delivery Information</h1>
+                <form onSubmit={(e) => handleCheckout(e)} id='orderId'>
+                    <div className='flex flex-col gap-3 mb-3'>
+                        <label htmlFor="first name"> First Name</label>
+                        <input className='outline outline-1' type="text" name='firstName' />
+                    </div>
+                    <div className='flex flex-col gap-3 mb-3'>
+                        <label htmlFor="last name"> Last Name</label>
+                        <input className='outline outline-1' type="text" name='lastName' />
+                    </div>
+                    <div className='flex flex-col gap-3 mb-3'>
+                        <label htmlFor="phone number"> Phone Number</label>
+                        <input className='outline outline-1' type="text" name='phone' />
+                    </div>
+                    <div className='flex flex-col gap-3 mb-3'>
+                        <label className='font-bold' htmlFor="Address">Address</label>
+                        <textarea className='outline outline-1' name="address" id="" cols="30" rows="10" ></textarea>
+
+                    </div>
+                    <div>
+                        <button className='bg-black text-white p-[10px] rounded-md hover:bg-orange-500'>
+                            Pay Now
+                        </button>
+                    </div>
+                </form>
             </div>
-          </form>
-    </div>
-    
-    </div>
-  )
+
+        </div>
+    )
 }
 
 export default Checkout
