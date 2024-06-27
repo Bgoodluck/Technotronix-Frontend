@@ -49,7 +49,7 @@ const cartTable = (
                     </td>
                     <td>₦{item.products?.price}</td>
                     <td>
-                        <input type="number" className='outline outline-1 md:w-[50px]'
+                        <input type="number" className='outline outline-1 w-[50px]'
                         value={item.quantity} 
                         min={1}
                         onChange={(e)=> updateQuantity(item.product._id, e.target.value)} />
