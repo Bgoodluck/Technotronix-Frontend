@@ -65,7 +65,7 @@ function Checkout() {
                     <td>{item.name}</td>
                     <td>
                         <div className='flex justify-center'>
-                            <img src={"https://technotronix-api-eeve.onrender.com/" +  item.product.img} className='h-[50px]' alt="" />
+                            <img src={"https://technotronix-api-eeve.onrender.com" +  item.product.img} className='h-[50px]' alt="" />
                         </div>
                     </td>
                     <td>₦{item.product.price}</td>
