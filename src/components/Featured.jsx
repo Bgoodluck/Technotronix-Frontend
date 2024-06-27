@@ -63,6 +63,7 @@ function Featured() {
 
   return (
     <div className="my-10 mx-5 md:mx-10 lg:mx-20">
+      <div className="flex text-center font-bold text-sm"><marquee behavior="" direction="">An E-commerce website designed and developed by Adebisi Bobby Goodluck</marquee></div>
       <h1 className="mb-10 text-orange-500 font-bold text-2xl md:text-3xl lg:text-4xl">Featured Products</h1>
       <div className="flex flex-wrap gap-8 justify-center md:justify-start">
         {featured.map((item) => (
