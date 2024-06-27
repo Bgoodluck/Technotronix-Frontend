@@ -46,7 +46,7 @@ export const EcomProvider = ({children}) =>{
     //  const upcoming = arrivals.filter((item)=> item.arrivals === true )
 
         const fetchProduct = async()=>{
-            const res = await fetch("hhttps://technotronix-api-eeve.onrender.com/api/product")
+            const res = await fetch("https://technotronix-api-eeve.onrender.com/api/product")
             const data = await res.json()
             setProduct(data)
         }
