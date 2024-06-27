@@ -62,19 +62,21 @@ function Featured() {
   };
 
   return (
-    <div className="my-5 mx-5 md:mx-10 lg:mx-20">
-      <h1 className="mb-5 text-orange-500 font-bold text-xl md:text-2xl">Featured Products</h1>
-      <div className="flex flex-wrap gap-5 justify-center md:justify-start">
+    <div className="my-10 mx-5 md:mx-10 lg:mx-20">
+      <h1 className="mb-10 text-orange-500 font-bold text-2xl md:text-3xl lg:text-4xl">Featured Products</h1>
+      <div className="flex flex-wrap gap-8 justify-center md:justify-start">
         {featured.map((item) => (
-          <Card key={item._id}>
+          <Card key={item._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 shadow-lg rounded-lg">
             <Link to={`/detail/${item._id}`}>
-              <img src={"https://technotronix-api-eeve.onrender.com/" + item.img} alt="" className="h-40 md:h-48 lg:h-56" />
+              <img src={"https://technotronix-api-eeve.onrender.com/" + item.img} alt="" className="h-48 md:h-56 lg:h-64 object-cover w-full rounded-t-lg" />
             </Link>
-            <p className="font-semibold mt-2">{item.name}</p>
-            <p>₦{item.price}</p>
-            <button onClick={isAuthenticated ? () => addTocart(item._id) : login} className="bg-orange-500 text-white py-2 px-4 rounded mt-2">
-              Add to cart
-            </button>
+            <div className="p-4">
+              <p className="font-semibold text-lg mt-2">{item.name}</p>
+              <p className="text-xl font-bold text-gray-700">₦{item.price}</p>
+              <button onClick={isAuthenticated ? () => addTocart(item._id) : login} className="bg-orange-500 text-white py-2 px-4 rounded mt-4 w-full hover:bg-orange-600 transition duration-300">
+                Add to cart
+              </button>
+            </div>
           </Card>
         ))}
       </div>
@@ -83,3 +85,4 @@ function Featured() {
 }
 
 export default Featured;
+
