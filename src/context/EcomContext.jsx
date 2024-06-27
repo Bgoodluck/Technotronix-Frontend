@@ -65,7 +65,7 @@ export const EcomProvider = ({children}) =>{
         }
 
         const fetchNewArrivals = async () => {
-            const res = await fetch("https://technotronix-api-eeve.onrender.com/arrivals");
+            const res = await fetch("https://localhost:3000/arrivals");
             const data = await res.json();
             setNewArrivals(data);
         };
