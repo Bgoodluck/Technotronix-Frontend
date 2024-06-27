@@ -25,7 +25,7 @@ function Checkout() {
         const address = e.target.elements.address.value;
 
         try {
-            const res = await fetch("http://localhost:3000/api/payment/initiate", {
+            const res = await fetch("https://technotronix-api-eeve.onrender.com/api/payment/initiate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -65,7 +65,7 @@ function Checkout() {
                     <td>{item.name}</td>
                     <td>
                         <div className='flex justify-center'>
-                            <img src={"http://localhost:3000/" +  item.product.img} className='h-[50px]' alt="" />
+                            <img src={"https://technotronix-api-eeve.onrender.com/" +  item.product.img} className='h-[50px]' alt="" />
                         </div>
                     </td>
                     <td>₦{item.product.price}</td>

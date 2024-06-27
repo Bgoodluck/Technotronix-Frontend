@@ -103,7 +103,7 @@ function Products() {
             return (
               <Card key={item._id}>
                 <Link to={`/detail/${item._id}`}>
-                  <img src={"http://localhost:3000/" + garageDetails.img} alt="" className='h-48 sm:h-64 lg:h-72 object-contain' />
+                  <img src={"https://technotronix-api-eeve.onrender.com/" + garageDetails.img} alt="" className='h-48 sm:h-64 lg:h-72 object-contain' />
                 </Link>
                 <p className='font-semibold'>{garageDetails.name}</p>
                 <p>{garageDetails.price}</p>
