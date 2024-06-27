@@ -152,27 +152,32 @@ function Header() {
     deleteItem();
     dispatch({ type: 'setToken', payload: null });
     showAndHide('success', 'you are now signed out');
+    setOpen(false);
   }
+
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
 
   const sharedLinks = (
     <>
-      <Link className='text-[15px] font-medium hover:text-white' to="/">Home</Link>
-      <Link className='text-[15px] font-medium hover:text-white' to="/products">Products</Link>
+      <Link className='text-[15px] font-medium hover:text-white' to="/" onClick={handleLinkClick}>Home</Link>
+      <Link className='text-[15px] font-medium hover:text-white' to="/products" onClick={handleLinkClick}>Products</Link>
     </>
   );
 
   const unauthenticatedLinks = (
     <>
       {sharedLinks}
-      <Link className='text-[15px] font-medium hover:text-white' to="/login">Login</Link>
-      <Link className='text-[15px] font-medium hover:text-white' to="/register">Signup</Link>
+      <Link className='text-[15px] font-medium hover:text-white' to="/login" onClick={handleLinkClick}>Login</Link>
+      <Link className='text-[15px] font-medium hover:text-white' to="/register" onClick={handleLinkClick}>Signup</Link>
     </>
   );
 
   const authenticatedLinks = (
     <>
       {sharedLinks}
-      <Link className='text-[15px] font-medium hover:text-white relative' to="/cart">
+      <Link className='text-[15px] font-medium hover:text-white relative' to="/cart" onClick={handleLinkClick}>
         <TiShoppingCart className='text-xl' />
         <div className='absolute bottom-2 left-2 bg-black text-center text-white rounded-full h-4 w-4 text-[10px] pt-[1px]'>{cartCount}</div>
       </Link>
@@ -199,17 +204,17 @@ function Header() {
   );
 
   const mobileMenuOverlay = (
-    <div onClick={() => setOpen(!open)} className={`fixed lg:hidden top-0 w-full bg-black z-[20] transition-opacity duration-200 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}></div>
+    <div onClick={() => setOpen(false)} className={`fixed lg:hidden top-0 w-full bg-black z-[20] transition-opacity duration-200 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}></div>
   );
 
   const mobileMenuContent = (
     <div className={`fixed lg:hidden left-0 top-0 w-[300px] h-screen overflow-auto z-[20] bg-white transition-transform duration-200 ${open ? "translate-x-0" : "translate-x-[500px]"}`}>
       <nav className='flex flex-col items-center gap-10 pt-20'>
-        <Link className='text-[25px] font-medium hover:text-orange-500' to="/">Home</Link>
-        <Link className='text-[25px] font-medium hover:text-orange-500' to="/products">Products</Link>
+        <Link className='text-[25px] font-medium hover:text-orange-500' to="/" onClick={handleLinkClick}>Home</Link>
+        <Link className='text-[25px] font-medium hover:text-orange-500' to="/products" onClick={handleLinkClick}>Products</Link>
         {isAuthenticated ? (
           <>
-            <Link className='text-[25px] font-medium hover:text-orange-500 relative' to="/cart">
+            <Link className='text-[25px] font-medium hover:text-orange-500 relative' to="/cart" onClick={handleLinkClick}>
               <TiShoppingCart className='text-4xl' />
               <div className='absolute bottom-4 left-4 bg-black text-center text-white rounded-full h-6 w-6 text-[15px] pt-[1px]'>{cartCount}</div>
             </Link>
@@ -221,8 +226,8 @@ function Header() {
           </>
         ) : (
           <>
-            <Link className='text-[25px] font-medium hover:text-orange-500' to="/login">Login</Link>
-            <Link className='text-[25px] font-medium hover:text-orange-500' to="/register">Signup</Link>
+            <Link className='text-[25px] font-medium hover:text-orange-500' to="/login" onClick={handleLinkClick}>Login</Link>
+            <Link className='text-[25px] font-medium hover:text-orange-500' to="/register" onClick={handleLinkClick}>Signup</Link>
           </>
         )}
       </nav>
