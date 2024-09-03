@@ -6,14 +6,14 @@ import EcomContext from '../context/EcomContext';
 
 
 function Carousel() {
-  const {slide} = useContext(EcomContext)
+  // const {slide} = useContext(EcomContext)
 
   return (
     <div>
         <TECarousel showControls showIndicators ride="carousel">
         <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
 
-            {slide.map((item)=>(
+            {carousel.map((item)=>(
                 
             <TECarouselItem
             itemID={item.id}
