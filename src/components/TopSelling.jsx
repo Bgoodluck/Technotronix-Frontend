@@ -73,7 +73,7 @@ function TopSelling() {
         {topSelling.map((item) => (
           <Card key={item._id}>
             <Link to={`/detail/${item._id}`}>
-              <img src={"https://technotronix-api-eeve.onrender.com/" + item.img} alt="" className='h-40 md:h-48 lg:h-56' />
+              <img src={"https://technotronix-api-eeve.onrender.com/" + item.img} alt="" className="h-48 md:h-56 lg:h-64 object-cover w-full rounded-t-lg" />
             </Link>
             <p className='font-semibold mt-2'>{item.name}</p>
             <p>₦{item.price}</p>
