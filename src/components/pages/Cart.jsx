@@ -124,7 +124,7 @@ function Cart() {
                 <td className="px-4 py-2">{item.product.name}</td>
                 <td className="px-4 py-2">
                   <div className="flex justify-center">
-                    <img src={"https://technotronix-api-eeve.onrender.com" + item.product.img} className="h-[50px]" alt="" />
+                    <img src={"https://technotronix-api-eeve.onrender.com/" + item.product.img} className="h-[50px]" alt="" />
                   </div>
                 </td>
                 <td className="px-4 py-2">₦{item.product.price}</td>
